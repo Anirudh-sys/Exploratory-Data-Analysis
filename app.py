@@ -8,7 +8,7 @@ st.set_page_config(page_title="Credit Card Transactions Analysis", layout="cente
 # Load dataset
 @st.cache_data
 def load_data():
-    df = pd.read_csv('D:/github projects/Data Analysis/CreditCards.csv/CreditCards_cleaned.csv')
+    df = pd.read_csv('CreditCards_cleaned.csv')
     # Check if the 'Date' column exists and convert it to datetime
     if 'Date' in df.columns:
         df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y', errors='coerce')
